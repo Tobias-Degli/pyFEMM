@@ -1,0 +1,106 @@
+[Format]      =  1
+[Precision]   =  1e-008
+[MinAngle]    =  20
+[DoSmartMesh] =  1
+[Depth]       =  0.0030000000000000001
+[LengthUnits] =  meters
+[ProblemType] =  planar
+[Coordinates] =  cartesian
+[PrevSoln] = ""
+[dT] = 0
+[Comment]     =  "Add comments here."
+[PointProps]   = 0
+[BdryProps]   = 2
+  <BeginBdry>
+    <BdryName> = "convectionToAmbient"
+    <BdryType> = 2
+    <Tset> = 0
+    <qs>   = 0
+    <beta> = 0
+    <h>    = 7
+    <Tinf> = 40
+  <EndBdry>
+  <BeginBdry>
+    <BdryName> = "prescribedFixingTemperature"
+    <BdryType> = 0
+    <Tset> = 40
+    <qs>   = 0
+    <beta> = 0
+    <h>    = 0
+    <Tinf> = 0
+  <EndBdry>
+[BlockProps]  = 6
+  <BeginBlock>
+    <BlockName> = "Al"
+    <Kx> = 226
+    <Ky> = 226
+    <Kt> = 0
+    <qv> = 0
+  <EndBlock>
+  <BeginBlock>
+    <BlockName> = "Air"
+    <Kx> = 0.025999999999999999
+    <Ky> = 0.025999999999999999
+    <Kt> = 0
+    <qv> = 0
+  <EndBlock>
+  <BeginBlock>
+    <BlockName> = "Sylgard"
+    <Kx> = 0.39000000000000001
+    <Ky> = 0.39000000000000001
+    <Kt> = 0
+    <qv> = 0
+  <EndBlock>
+  <BeginBlock>
+    <BlockName> = "Copper"
+    <Kx> = 413
+    <Ky> = 413
+    <Kt> = 0
+    <qv> = 0
+  <EndBlock>
+  <BeginBlock>
+    <BlockName> = "ThermalPaste"
+    <Kx> = 12.800000000000001
+    <Ky> = 12.800000000000001
+    <Kt> = 0
+    <qv> = 0
+  <EndBlock>
+  <BeginBlock>
+    <BlockName> = "Heater"
+    <Kx> = 5
+    <Ky> = 5
+    <Kt> = 0
+    <qv> = 10000000.000000009
+  <EndBlock>
+[ConductorProps]  = 0
+[NumPoints] = 12
+0.0050000000000000001	0	0	0	0
+0.044999999999999998	0	0	0	0
+0.050000000000000003	0.0050000000000000001	0	0	0
+0.050000000000000003	0.025000000000000001	0	0	0
+0.044999999999999998	0.029999999999999999	0	0	0
+0.0050000000000000001	0.029999999999999999	0	0	0
+0	0.025000000000000001	0	0	0
+0	0.0050000000000000001	0	0	0
+0.029999999999999999	0.02	0	0	0
+0.035000000000000003	0.02	0	0	0
+0.035000000000000003	0.025000000000000001	0	0	0
+0.029999999999999999	0.025000000000000001	0	0	0
+[NumSegments] = 10
+0	1	-1	2	0	0	0
+2	3	-1	1	0	0	0
+3	4	-1	1	0	0	0
+4	5	-1	1	0	0	0
+5	6	-1	1	0	0	0
+6	7	-1	1	0	0	0
+8	9	-1	0	0	0	0
+9	10	-1	0	0	0	0
+10	11	-1	0	0	0	0
+11	8	-1	0	0	0	0
+[NumArcSegments] = 2
+1	2	90	10	1	0	0	0	1
+7	0	90	10	1	0	0	0	1
+[NumHoles] = 0
+[NumBlockLabels] = 2
+0.032500000000000001	0.022499999999999999	6	0.00050000000000000001	0	0
+0.024999999999999998	0.014999999999999999	4	0.00050000000000000001	0	0
