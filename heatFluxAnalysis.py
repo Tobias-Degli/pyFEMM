@@ -32,8 +32,8 @@ femm.hi_addmaterial('ThermalPaste',12.8 ,12.8 ,0)  # W/(mK)
 femm.hi_addmaterial('Heater',5,5 ,Q_ger) # W/(mK), W/m³
 
 # Boundary conditions
-femm.hi_addboundprop('convectionToAmbient',2,0,0,40,7,0); # Ar externo a 40° e h=7 (Geyverson)
-femm.hi_addboundprop('prescribedFixingTemperature',0,40,0,0,0,0); # Ar externo a 40° e h=7 (Geyverson)#
+femm.hi_addboundprop('convectionToAmbient',2,0,0,40,7,0); # Ar externo a 40° e h=7
+femm.hi_addboundprop('prescribedFixingTemperature',0,40,0,0,0,0); # Ar externo a 40° e h=7
 
 # Apply Materials to regions
 # Board
